@@ -1,0 +1,16 @@
+ssh-keygen -t rsa -C "youremail@example.com"
+
+本地
+
+git  init
+
+git add *  git commit -m ""
+
+
+远程
+创建版本库
+
+本地提交到github
+git remote add origin  你的git
+
+git push -u  origin master (第一次提交加-u)
