@@ -1,0 +1,1 @@
+如果你会html+js+css，那你只需要一个hbuilder就可以开发app了，通吃android和ios
