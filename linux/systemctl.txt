@@ -1,0 +1,20 @@
+默认路径在
+/usr/lib/systemd/system
+
+列出所有可用单元
+systemctl list-unit-files
+
+Systemctl接受服务（.service），挂载点（.mount），套接口（.socket）和设备（.device）作为单元。
+
+列出所有运行中单元
+systemctl list-units
+
+列出所有失败单元
+systemctl --failed
+
+检查某个单元（如 cron.service）是否启用
+systemctl is-enabled crond.service
+
+
+列出所有服务（包括启用的和禁用的）
+systemctl list-unit-files --type=service

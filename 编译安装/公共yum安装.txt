@@ -1,0 +1,5 @@
+安装make
+        yum -y install gcc automake autoconf libtool make
+		
+安装g++
+        yum install gcc gcc-c++
