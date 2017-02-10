@@ -1,0 +1,9 @@
+https://my.oschina.net/u/1428349/blog/288708
+
+查看 /sbin/ifconfig是否存在
+
+#echo $PATH 环境变量
+
+$export PATH = $PATH:/sbin
+yum upgrade
+yum install net-tools
