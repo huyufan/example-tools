@@ -1,0 +1,25 @@
+centos源不能安装libmcrypt-devel，由于版权的原因没有自带mcrypt的包
+
+有两种方法解决，一种是使用第三方源，这样还可以使用yum来安装，简单方便，坏处是第三方源多少有中不可靠的感觉。
+
+解决办法一
+1、安装第三方yum源
+wget http://www.atomicorp.com/installers/atomic
+sh ./atomic
+2、使用yum命令安装
+yum  install  php-mcrypt  libmcrypt  libmcrypt-devel
+     
+
+解决办法二、
+使用php mcrypt 前必须先安装Libmcrypt
+
+libmcrypt源码安装方法：
+
+
+cd /usr/local/src
+wget http://softlayer.dl.sourceforge.net/sourceforge/mcrypt/libmcrypt-2.5.8.tar.gz
+tar -zxvf libmcrypt-2.5.8.tar.gz
+cd /usr/local/src/libmcrypt-2.5.8
+./configure --prefix=/usr/local
+make
+make install

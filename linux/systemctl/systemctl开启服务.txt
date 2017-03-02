@@ -1,0 +1,25 @@
+先扩展放到/etc/init.d/nginx
+
+然后打开 /usr/lib/systemd/system
+
+创建nginx.service  vim打开
+
+  1 [Unit]
+  2 Description=nginx qidong
+  3 After=syslog.target
+  4 AssertPathExists=/etc/sysconfig/iptables
+  5 
+  6 [Service]
+  7 Type=oneshot
+  8 RemainAfterExit=yes
+  9 ExecStart=/etc/init.d/nginx start
+ 10 ExecReload=/etc/init.d/nginx reload
+ 11 ExecStop=/etc/init.d/nginx stop
+ 12 Environment=BOOTUP=serial
+ 13 Environment=CONSOLETYPE=serial
+ 14 StandardOutput=syslog
+ 15 StandardError=syslog
+ 16 
+ 17 [Install]
+ 18 WantedBy=basic.target
+~                               

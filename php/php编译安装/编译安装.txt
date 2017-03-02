@@ -1,0 +1,14 @@
+wget -c ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz
+./configure --prefix=/usr/local/libmcrypt make   make install
+
+
+wget -c https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.15.tar.gz
+
+wget -c ftp://ftp.gnu.org/pub/gnu/gettext/gettext-0.19.8.1.tar.gz
+
+yum install -y gcc gcc-c++ autoconf libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel curl libcurl-devel bison libxml2 libxml2-devel openssl-openssl-devel
+
+
+
+./configure --prefix=/usr/local/php --enable-opcache --with-lib=lib64dir  --enable-ftp --with-openssl   --with-iconv-dir=root/libiconv-1.15  --with-zlib-dir=root/zlib-1.2.11   --with-mcrypt=/usr/local/libmcrypt --with-mhash --with-libxml-dir --enable-bcmath --enable-sockets --with-png-dir  --with-gd  --with-jpeg-dir --with-freetype-dir --enable-mbstring=all  --with-curl  --with-gettext=/root/gettext-0.19.8.1  --enable-xml --with-zlib-dir --enable-fpm  --enable-zip --enable-phpdbg --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd -with-fpm-user=www --with-fpm-group=www
+
