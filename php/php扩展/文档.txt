@@ -1,1 +1,6 @@
-https://github.com/Leon2012/php-ext
+https://github.com/Leon2012/php-ext  写扩展
+
+https://github.com/lovezhao311/linux_php_installer   安装扩展
+
+
+https://github.com/php-ds/extension 数据结构  map、set、vector、queue、hashtable、priority_queue、sequence、stack
