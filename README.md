@@ -17,6 +17,14 @@
   <li><a href="https://github.com/huyufan/example-tools/blob/master/https/status.md#http_header_fields">http header fields<a></li>
 
 ## linux
+- centos7
+	- systemctl
+		- [开启服务][11]
+		- [用法][12]
+	- ifconfig[13]
+
+- sysstat
+
 
 ## mysql
 
@@ -37,3 +45,6 @@
 [8]: https://github.com/huyufan/example-tools/blob/master/php/php%E6%89%A9%E5%B1%95/%E6%96%87%E6%A1%A3.txt
 [9]: https://github.com/huyufan/example-tools/blob/master/php/php%E6%BA%90%E7%A0%81/%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB.txt
 [10]: https://github.com/huyufan/example-tools/blob/master/php/php%E8%B5%84%E6%96%99%E6%96%87%E6%A1%A3/PHP%E9%A5%AD%E7%B1%B3%E7%B2%92.txt
+[11]: https://github.com/huyufan/example-tools/blob/master/linux/systemctl/systemctl%E5%BC%80%E5%90%AF%E6%9C%8D%E5%8A%A1.txt
+[12]: https://github.com/huyufan/example-tools/blob/master/linux/systemctl/systemctl%E7%94%A8%E6%B3%95.txt
+[13]: https://github.com/huyufan/example-tools/blob/master/linux/conteosifconfig.txt
