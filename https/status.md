@@ -25,3 +25,31 @@
 - 504: gateway timeout，fastcgi响应超时
 
 <h2 id="http_header_fields">HTTP Header Fields</h2>
+常见通用头部
+
+- Cache-Control:
+	- no-cache: 不缓存过期的缓存
+	- no-store: 不缓存
+Pragma: no-cache, 不使用缓存，http1.1前的历史字段
+Connection:
+控制不在转发给代理首部不字段
+Keep-Alive/Close: 持久连接
+Date: 创建http报文的日期
+常见请求头
+
+Accept: 可以处理的媒体类型和优先级
+Host: 目标主机域名
+Referer: 请求从哪发起的原始资源URI
+User-Agent: 创建请求的用户代理名称
+Cookie: cookie信息
+常见响应头
+
+Location: 重定向地址
+Server: 被请求的服务web server的信息
+Set-Cookie: 要设置的cookie信息
+NAME: 要设置的键值对
+expires: cookie过期时间
+path: 指定发送cookie的目录
+domain: 指定发送cookie的域名
+Secure: 指定之后只有https下才发送cookie
+HostOnly: 指定之后javascript无法读取cookie
