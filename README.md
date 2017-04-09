@@ -32,6 +32,13 @@
 ## nginx
 - [编译安装][4]
 
+## js
+- vue.js
+
+- react native
+
+- js
+	+ 事件委托
 
 [1]: https://github.com/huyufan/example-tools/blob/master/https/status.md
 [2]: https://github.com/huyufan/example-tools/blob/master/redis/readme.md
