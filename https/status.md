@@ -8,7 +8,7 @@
 
 > URI: Uniform Resource Identitier, 统一资源标示符号，URL是URI的子集
 
-## HTTP Status (#1)
+## HTTP Status 
 - 200: ok
 - 301: 永久重定向
 - 302: 临时重定向
@@ -23,3 +23,5 @@
 - 502: bad gateway，fastcgi返回的内容web server不明白
 - 503: service unavailable，服务不可用
 - 504: gateway timeout，fastcgi响应超时
+
+<h2 id="http_header_fields">HTTP Header Fields</h2>
