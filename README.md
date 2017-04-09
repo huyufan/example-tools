@@ -19,12 +19,10 @@
 ## linux
 - centos7
 	- systemctl
-		- [开启服务][11]
-		- [用法][12]
-	- ifconfig[13]
-
-- sysstat
-
+		+ [开启服务][11]
+		+ [用法][12]
+	- [ifconfig][13]
+- [sysstat][14]
 
 ## mysql
 
@@ -48,3 +46,4 @@
 [11]: https://github.com/huyufan/example-tools/blob/master/linux/systemctl/systemctl%E5%BC%80%E5%90%AF%E6%9C%8D%E5%8A%A1.txt
 [12]: https://github.com/huyufan/example-tools/blob/master/linux/systemctl/systemctl%E7%94%A8%E6%B3%95.txt
 [13]: https://github.com/huyufan/example-tools/blob/master/linux/conteosifconfig.txt
+[14]: https://github.com/huyufan/example-tools/tree/master/linux/sysstat
