@@ -1,0 +1,16 @@
+https://my.oschina.net/u/1428349/blog/288708
+
+查看ifconfig命令是否存在
+
+查看 /sbin/ifconfig是否存在
+
+如果ifconfig命令存在，查看环境变量设置   
+
+echo $PATH
+
+临时修改环境变量：在shell中输入      
+$export PATH = $PATH:/sbin
+
+如果ifconfig命令不存在
+yum upgrade
+yum install net-tools
