@@ -48,9 +48,9 @@
 - Location: 重定向地址
 - Server: 被请求的服务web server的信息
 - Set-Cookie: 要设置的cookie信息
-- NAME: 要设置的键值对
-- expires: cookie过期时间
-- path: 指定发送cookie的目录
-- domain: 指定发送cookie的域名
-- Secure: 指定之后只有https下才发送cookie
-- HostOnly: 指定之后javascript无法读取cookie
+	- NAME: 要设置的键值对
+	- expires: cookie过期时间
+	- path: 指定发送cookie的目录
+	- domain: 指定发送cookie的域名
+	- Secure: 指定之后只有https下才发送cookie
+	- HostOnly: 指定之后javascript无法读取cookie
