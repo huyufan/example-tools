@@ -3,8 +3,7 @@
 
 ## http|https
 * [code status][1]
-* [http_header_fields][3](#http_header_fields)
-<li><a href="https://github.com/huyufan/example-tools/blob/master/https/status.md#http_header_fields">http_header_fields<a></li>
+  <li><a href="https://github.com/huyufan/example-tools/blob/master/https/status.md#http_header_fields">http_header_fields<a></li>
 
 ## linux
 
