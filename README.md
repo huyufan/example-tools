@@ -3,7 +3,7 @@
 ## php
 
 ## http|https
-[code status]([1])
+[code status](https://github.com/huyufan/example-tools/blob/master/https/status.md)
 
 ## linux
 
@@ -12,12 +12,11 @@
 
 
 ## redis
-* [数据结构][2]
+* [数据结构](https://github.com/huyufan/example-tools/blob/master/redis/readme.md)
 
 ## nginx
 
 
 
 
-[1]:
-[2]:https://github.com/huyufan/example-tools/blob/master/redis/readme.md
+
