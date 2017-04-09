@@ -35,14 +35,15 @@
 	- 控制不在转发给代理首部不字段
 	- Keep-Alive/Close: 持久连接
 - Date: 创建http报文的日期
-常见请求头
+<p>常见请求头</p>
 
 - Accept: 可以处理的媒体类型和优先级
 - Host: 目标主机域名
 - Referer: 请求从哪发起的原始资源URI
 - User-Agent: 创建请求的用户代理名称
 - Cookie: cookie信息
-常见响应头
+
+<p>常见响应头</p>
 
 - Location: 重定向地址
 - Server: 被请求的服务web server的信息
