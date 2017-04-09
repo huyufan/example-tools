@@ -8,7 +8,7 @@
 
 > URI: Uniform Resource Identitier, 统一资源标示符号，URL是URI的子集
 
-## HTTP Status
+## HTTP Status (#1)
 - 200: ok
 - 301: 永久重定向
 - 302: 临时重定向

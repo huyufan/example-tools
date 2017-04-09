@@ -3,7 +3,7 @@
 ## php
 
 ## http|https
-* [code status][1](#1)
+* [code status][1]
 
 ## linux
 
