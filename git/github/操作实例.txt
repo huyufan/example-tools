@@ -14,3 +14,6 @@ git add *  git commit -m ""
 git remote add origin  你的git
 
 git push -u  origin master (第一次提交加-u)
+
+
+ git remote set-url origin git+ssh://git@github.com/huyufan/example-tools.git
