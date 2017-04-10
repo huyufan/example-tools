@@ -12,6 +12,12 @@
 	- [文献][9]
 - 文档
 	- [文献][10]
+- 发布代码
+	- [文献]
+- swoole
+	- [代码补全ide][16]
+-yaf
+	- [代码补全ide][17]
 ## http|https
 * [状态码][1]
   <li><a href="https://github.com/huyufan/example-tools/blob/master/https/status.md#http_header_fields">头部字段描述<a></li>
@@ -56,3 +62,5 @@
 [13]: https://github.com/huyufan/example-tools/blob/master/linux/conteosifconfig.txt
 [14]: https://github.com/huyufan/example-tools/tree/master/linux/sysstat
 [15]: https://github.com/huyufan/example-tools/blob/master/linux/linux.md
+[16]: https://github.com/eaglewu/swoole-ide-helper
+[17]: https://github.com/xudianyang/yaf.auto.complete
