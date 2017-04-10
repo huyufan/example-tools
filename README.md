@@ -66,3 +66,4 @@
 [15]: https://github.com/huyufan/example-tools/blob/master/linux/linux.md
 [16]: https://github.com/eaglewu/swoole-ide-helper
 [17]: https://github.com/xudianyang/yaf.auto.complete
+[18]: https://github.com/huyufan/example-tools/blob/master/%E7%AE%97%E6%B3%95/bubble.php
