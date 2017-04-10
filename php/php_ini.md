@@ -20,6 +20,5 @@ sleep($i + 1); //
 < ?php if(extension_loaded('zlib')) {ob_end_flush();} ?>
 ```
 3. zlib.output_compression(php.ini÷–)
-
-zlib.output_compression = On
-zlib.output_compression_level = 6 
+	- zlib.output_compression = On
+	- zlib.output_compression_level = 6 
