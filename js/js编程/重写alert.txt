@@ -1,0 +1,9 @@
+(function() {
+    var oldAlert = window.alert,
+        count = 0;
+    window.alert = function(a) {
+        count++;
+        oldAlert(a + "\n You've called alert " + count + " times now. Stop, it's evil!");
+    };
+})();
+alert("Hello World");
