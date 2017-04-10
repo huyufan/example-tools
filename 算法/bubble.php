@@ -14,10 +14,7 @@ function bubble($value){
     return $value;
 }
 
-/** ÓÅ»¯ºó
-*/
-
-
+//ä¼˜åŒ–
 function bubble_better($value){
 	$i=count($value)-1;
 	while($i>0){
