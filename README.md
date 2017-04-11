@@ -32,7 +32,13 @@
 - [脚本命令][15]
 
 ## mysql
-
+- [analyze(分析)][19]
+- [sql语句优化分析][20]
+- [安装mysql56][21]
+- [mysql主从复制][22]
+- [慢查询日志记录][23]
+- [grant and create user][24]
+- [通过show status 优化数据库性能][25]
 ## redis
 * [数据结构][2]
 
@@ -67,3 +73,10 @@
 [16]: https://github.com/eaglewu/swoole-ide-helper
 [17]: https://github.com/xudianyang/yaf.auto.complete
 [18]: https://github.com/huyufan/example-tools/blob/master/%E7%AE%97%E6%B3%95/bubble.php
+[19]: https://github.com/huyufan/work-docment/blob/master/mysql/analyze.txt
+[20]: https://github.com/huyufan/example-tools/blob/master/mysql/%E4%BC%98%E5%8C%96sql%E8%AF%AD%E5%8F%A5.md
+[21]: https://github.com/huyufan/work-docment/blob/master/mysql/%E5%AE%89%E8%A3%85mysql56.txt
+[22]: https://github.com/huyufan/work-docment/blob/master/mysql/mysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.txt
+[23]: https://github.com/huyufan/work-docment/blob/master/mysql/mysqlvariables.txt
+[24]: https://github.com/huyufan/work-docment/blob/master/mysql/mysql%E6%9D%83%E9%99%90.txt
+[25]: https://github.com/huyufan/work-docment/blob/master/mysql/mysql%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95.txt
