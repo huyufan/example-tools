@@ -1,3 +1,5 @@
 1：设置bios（Basic Input Output System） 虚拟开启  
+(联想G410进入BIOS界面：Configuratio > Intel Virtual Technology > Enabled)
+注：主板不一样其BISO中显示关键词也不一样的，主要是找到Virtual或Virtualization将其设置为Enabled。
 
 2：网络设置 为桥段   全部同意
