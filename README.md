@@ -1,4 +1,4 @@
-<h1 align="center">huyufan-worktree</h1>
+<h1 align="center">huyufan-worktree()</h1>
 
 ## php
 - 编译安装
