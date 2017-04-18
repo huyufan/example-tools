@@ -10,7 +10,7 @@ git branch
 查看远程分支
 git branch -a
 创建分支
-git branch test
+git branch test(或者 git checkout -b test(创建并切换))
 切换分支
 git checkout test
 分支推到远程分支
