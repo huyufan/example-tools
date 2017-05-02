@@ -40,7 +40,9 @@
 - [grant and create user][24]
 - [通过show status 优化数据库性能][25]
 ## redis
-* [数据结构][2]
+- [数据结构][2]
+- [redis与memcache区别][26]
+- [redis性能问题][27]
 
 ## nginx
 - [编译安装][4]
@@ -80,3 +82,5 @@
 [23]: https://github.com/huyufan/work-docment/blob/master/mysql/mysqlvariables.txt
 [24]: https://github.com/huyufan/work-docment/blob/master/mysql/mysql%E6%9D%83%E9%99%90.txt
 [25]: https://github.com/huyufan/work-docment/blob/master/mysql/mysql%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95.txt
+[26]: http://mp.weixin.qq.com/s?__biz=MzA3MzYwNjQ3NA==&mid=2651296789&idx=1&sn=7e31c22b64dcf0a200e00b3868001621&scene=2&srcid=07040HQDPuAVLZ8m5pRaLujP&from=timeline&isappinstalled=0#wechat_redirect
+[27]: http://mp.weixin.qq.com/s/gPPALmLMCSDLxDr2Juy2JA
