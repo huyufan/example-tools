@@ -12,3 +12,11 @@ yum install -y gcc gcc-c++ autoconf libjpeg libjpeg-devel libpng libpng-devel fr
 
 ./configure --prefix=/usr/local/php --enable-opcache --with-lib=lib64dir  --enable-ftp --with-openssl   --with-iconv-dir=root/libiconv-1.15  --with-zlib-dir=root/zlib-1.2.11   --with-mcrypt=/usr/local/libmcrypt --with-mhash --with-libxml-dir --enable-bcmath --enable-sockets --with-png-dir  --with-gd  --with-jpeg-dir --with-freetype-dir --enable-mbstring=all  --with-curl  --with-gettext=/root/gettext-0.19.8.1  --enable-xml --with-zlib-dir --enable-fpm  --enable-zip --enable-phpdbg --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd -with-fpm-user=www --with-fpm-group=www
 
+
+
+
+cp /data/php/php.ini.deve  /usr/local/php/lib
+
+sapi/fpm   自动脚本启动
+
+
