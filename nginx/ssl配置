@@ -1,0 +1,30 @@
+$ cd /usr/local/nginx/conf
+创建服务器私钥，命令会让你输入一个口令：
+
+$ openssl genrsa -des3 -out server.key 1024
+创建签名请求的证书（CSR）：
+
+$ openssl req -new -key server.key -out server.csr
+在加载SSL支持的Nginx并使用上述私钥时除去必须的口令：
+
+$ cp server.key server.key.org
+$ openssl rsa -in server.key.org -out server.key
+配置nginx
+
+最后标记证书使用上述私钥和CSR：
+
+$ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+修改Nginx配置文件，让其包含新标记的证书和私钥：
+
+server {
+    server_name YOUR_DOMAINNAME_HERE;
+        listen 443;
+	    ssl on;
+	        ssl_certificate /usr/local/nginx/conf/server.crt;
+		    ssl_certificate_key /usr/local/nginx/conf/server.key;
+		    }
+		    重启nginx。
+		    这样就可以通过以下方式访问：
+
+		    https://YOUR_DOMAINNAME_HERE
+http://www.cnblogs.com/yanghuahui/archive/2012/06/25/2561568.html		    
