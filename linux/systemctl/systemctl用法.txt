@@ -1,3 +1,8 @@
+http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html
+
+Systemd 默认从目录/etc/systemd/system/读取配置文件。但是，里面存放的大部分文件都是符号链接，指向目录/usr/lib/systemd/system/，真正的配置文件存放在那个目录。
+
+
 默认路径在
 /usr/lib/systemd/system
 
@@ -18,3 +23,4 @@ systemctl is-enabled crond.service
 
 列出所有服务（包括启用的和禁用的）
 systemctl list-unit-files --type=service
+systemctl list-units --type=service

@@ -1,0 +1,22 @@
+systemctl stop firewalld.service #停止firewall
+
+systemctl disable firewalld.service #禁止firewall开机启动
+
+systemctl mask firewalld
+
+yum -y remove  删除rpm包
+
+yum install iptables-services 
+
+systemctl restart iptables.service #最后重启防火墙使配置生效
+
+systemctl enable iptables.service #设置防火墙开机启动
+
+vi /etc/selinux/config	
+
+
+#SELINUX=enforcing #注释掉
+#SELINUXTYPE=targeted #注释掉
+SELINUX=disabled #增加
+
+setenforce 0 #使配置立即生效

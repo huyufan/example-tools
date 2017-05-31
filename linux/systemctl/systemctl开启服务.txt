@@ -1,4 +1,4 @@
-先扩展放到/etc/init.d/nginx
+先扩展放到/usr/libexecnginx
 
 然后打开 /usr/lib/systemd/system
 
