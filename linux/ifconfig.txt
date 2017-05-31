@@ -8,6 +8,6 @@ yum install net-tools
 
 echo $PATH 环境变量
 
-$export PATH = $PATH:/sbin
+$export PATH = $PATH:/sbin 
 
 
