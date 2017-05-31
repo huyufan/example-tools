@@ -2,15 +2,19 @@ $ cd /usr/local/nginx/conf
 创建服务器私钥，命令会让你输入一个口令：
 
 $ openssl genrsa -des3 -out server.key 1024
+(这里-out指定生成文件的。需要注意的是这个文件包含了公钥和密钥两部分，也就是说这个文件即可用来加密也可以用来解密。后面的1024是生成密钥的长度。)
+
+
 创建签名请求的证书（CSR）：
-
 $ openssl req -new -key server.key -out server.csr
-在加载SSL支持的Nginx并使用上述私钥时除去必须的口令：
 
+
+在加载SSL支持的Nginx并使用上述私钥时除去必须的口令：
 $ cp server.key server.key.org
 $ openssl rsa -in server.key.org -out server.key
-配置nginx
+(-in指定输入文件，-out指定提取生成公钥的文件名。至此，我们手上就有了一个公钥，一个私钥（包含公钥）。现在可以将用公钥来加密文件了。)
 
+配置nginx
 最后标记证书使用上述私钥和CSR：
 
 $ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
@@ -27,4 +31,17 @@ server {
 		    这样就可以通过以下方式访问：
 
 		    https://YOUR_DOMAINNAME_HERE
-http://www.cnblogs.com/yanghuahui/archive/2012/06/25/2561568.html		    
+http://www.cnblogs.com/yanghuahui/archive/2012/06/25/2561568.html	
+
+
+我在目录中创建一个hello的文本文件，然后利用此前生成的公钥加密文件：
+
+openssl rsautl -encrypt -in hello -inkey test_pub.key -pubin -out hello.en 
+-in指定要加密的文件，-inkey指定密钥，-pubin表明是用纯公钥文件加密，-out为加密后的文件。
+
+解密文件：
+
+openssl rsautl -decrypt -in hello.en -inkey test.key -out hello.de
+-in指定被加密的文件，-inkey指定私钥文件，-out为解密后的文件。
+
+至此，一次加密解密的过程告终。在实际使用中还可能包括证书，这个以后有机会再说~	    
