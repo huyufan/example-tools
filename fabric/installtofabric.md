@@ -4,18 +4,24 @@
 - mkdir fabric-sample cd fabric-sample
 - curl -sSL https://goo.gl/LQkuoh | bash
 
-./bin/cryptogen generate --config=./crypto-config.yaml
-export FABRIC_CFG_PATH=$PWD
-./bin/configtxgen -profile TwoOrgsOrdererGenesis -outputBlock ./channel-artifacts/genesis.block
-./bin/configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ./channel-artifacts/channel.tx -channelID <channel-ID>
-./bin/configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org1MSPanchors.tx -channelID <channel-ID> -asOrg Org1MSP
-./bin/configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID <channel-ID> -asOrg Org2MSP
+# fabric 配置
+- ./bin/cryptogen generate --config=./crypto-config.yaml
+
+- export FABRIC_CFG_PATH=$PWD
+
+- ./bin/configtxgen -profile TwoOrgsOrdererGenesis -outputBlock ./channel-artifacts/genesis.block
+
+- ./bin/configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ./channel-artifacts/channel.tx -channelID <channel-ID>
+
+- ./bin/configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org1MSPanchors.tx -channelID <channel-ID> -asOrg Org1MSP
+
+- ./bin/configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID <channel-ID> -asOrg Org2MSP
 
 
 
 # 生成密码和配置
 > 注释docker-compose-cli.yaml 第57行 【如果已经注释可以忽略此注释操作】
-- command: /bin/bash -c './scripts/script.sh ${CHANNEL_NAME}; sleep $TIMEOUT'
+- //command: /bin/bash -c './scripts/script.sh ${CHANNEL_NAME}; sleep $TIMEOUT'
 
 > 以下在shell中执行
 - $CHANNEL_NAME=king
@@ -40,7 +46,7 @@ f055c5ffa368        hyperledger/fabric-peer      "peer node start"   30 minutes 
 e7cfd965640f        hyperledger/fabric-peer      "peer node start"   30 minutes ago      Up 30 minutes       0.0.0.0:8051->7051/tcp, 0.0.0.0:8053->7053/tcp     peer1.org1.example.com
 5d7bcae4e38a        hyperledger/fabric-peer      "peer node start"   30 minutes ago      Up 30 minutes       0.0.0.0:9051->7051/tcp, 0.0.0.0:9053->7053/tcp     peer0.org2.example.com
 
-``` shell
+``` 
 
 # 创建Channel并加入
 > 进入操作容器实例
@@ -75,7 +81,7 @@ e57c8f794455        hyperledger/fabric-peer               "peer node start"     
 6d995eeba05d        hyperledger/fabric-peer               "peer node start"        About a minute ago   Up About a minute   0.0.0.0:10051->7051/tcp, 0.0.0.0:10053->7053/tcp   peer1.org2.example.com
 4e7873e1ab0b        hyperledger/fabric-peer               "peer node start"        About a minute ago   Up About a minute   0.0.0.0:9051->7051/tcp, 0.0.0.0:9053->7053/tcp     peer0.org2.example.com
 a59c5bb01bd8        hyperledger/fabric-peer               "peer node start"        About a minute ago   Up About a minute   0.0.0.0:8051->7051/tcp, 0.0.0.0:8053->7053/tcp     peer1.org1.example.com
-``` shell
+``` 
 
 # 查询和调用，cli容器内执行
 > 查询
