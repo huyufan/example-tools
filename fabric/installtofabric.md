@@ -57,7 +57,9 @@ e7cfd965640f        hyperledger/fabric-peer      "peer node start"   30 minutes 
 - $CHANNEL_NAME=king
 
 > 生成创世块
+``` shell
 - $peer channel create -o orderer.example.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/channel.tx --tls $CORE_PEER_TLS_ENABLED --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/cacerts/ca.example.com-cert.pem
+```
 
 > 加入
 - $peer channel join -b $CHANNEL_NAME.block
@@ -68,7 +70,9 @@ e7cfd965640f        hyperledger/fabric-peer      "peer node start"   30 minutes 
 - $peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
 
 > 初始化，并生成docker镜像并启动容器实例
+``` shell
 - $peer chaincode instantiate -o orderer.example.com:7050 --tls $CORE_PEER_TLS_ENABLED --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/cacerts/ca.example.com-cert.pem -C $CHANNEL_NAME -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02 -c '{"Args":["init","a", "100", "b","200"]}' -P "OR ('Org1MSP.member','Org2MSP.member')"
+```
 
 > 执行完毕新增docker实例
 ``` shell
@@ -88,7 +92,9 @@ a59c5bb01bd8        hyperledger/fabric-peer               "peer node start"     
 - $peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["query","a"]}'
 
 > 调用
+``` shell
 - $peer chaincode invoke -o orderer.example.com:7050  --tls $CORE_PEER_TLS_ENABLED --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/cacerts/ca.example.com-cert.pem  -C $CHANNEL_NAME -n mycc -c '{"Args":["invoke","a","b","10"]}'
+```
 
 > 日志查看，宿主机执行
 - $docker logs peer0.org1.example.com 
@@ -100,11 +106,11 @@ a59c5bb01bd8        hyperledger/fabric-peer               "peer node start"     
 > 清理所有容器实例和密码相关配置
 ``` shell
 [root@host1 linux-amd64]# ./network_setup.sh down
-``` shell
+``` 
 
 > 清理前
 ``` shell
 [root@host1 linux-amd64]# docker images
 REPOSITORY                                TAG                 IMAGE ID            CREATED             SIZE
 dev-peer0.org1.example.com-mycc-1.0       latest              d9ab7374192d        23 minutes ago      173MB
-``` shell
+``` 
