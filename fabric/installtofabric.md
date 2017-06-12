@@ -24,15 +24,15 @@
 - //command: /bin/bash -c './scripts/script.sh ${CHANNEL_NAME}; sleep $TIMEOUT'
 
 > 以下在shell中执行
-- $CHANNEL_NAME=king
-- $./generateArtifacts.sh $CHANNEL_NAME
+- CHANNEL_NAME=king
+- ./generateArtifacts.sh $CHANNEL_NAME
 > 上述命令执行完毕后channel-artifacts， crypto-config内将有文件生成
 
 > 启动镜像，会将生成的文件映射到部分容器实例
-- $CHANNEL_NAME=$CHANNEL_NAME TIMEOUT=1000 docker-compose -f docker-compose-cli.yaml up -d
+- CHANNEL_NAME=$CHANNEL_NAME TIMEOUT=1000 docker-compose -f docker-compose-cli.yaml up -d
 
 > 如果使用CouchDB
-- $CHANNEL_NAME=$CHANNEL_NAME TIMEOUT=1000 docker-compose -f docker-compose-cli.yaml -f docker-compose-couch.yaml up -d
+- CHANNEL_NAME=$CHANNEL_NAME TIMEOUT=1000 docker-compose -f docker-compose-cli.yaml -f docker-compose-couch.yaml up -d
 
 > 执行之后如下
 ``` shell
@@ -50,24 +50,24 @@ e7cfd965640f        hyperledger/fabric-peer      "peer node start"   30 minutes 
 
 # 创建Channel并加入
 > 进入操作容器实例
-- $docker exec -it cli bash
+- docker exec -it cli bash
 
 ## 后续操作在cli容器执行
 > 引入参数
-- $CHANNEL_NAME=king
+- CHANNEL_NAME=king
 
 > 生成创世块
 ``` shell
-- $peer channel create -o orderer.example.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/channel.tx --tls $CORE_PEER_TLS_ENABLED --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/cacerts/ca.example.com-cert.pem
+- peer channel create -o orderer.example.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/channel.tx --tls $CORE_PEER_TLS_ENABLED --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/cacerts/ca.example.com-cert.pem
 ```
 
 > 加入
-- $peer channel join -b $CHANNEL_NAME.block
+- peer channel join -b $CHANNEL_NAME.block
 
 # 安装CC并初始化，cli容器内执行
 
 > 安装CC，只是打包代码，路径和宿主机release/linux-amd64/chaincode/go
-- $peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
+- peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02
 
 > 初始化，并生成docker镜像并启动容器实例
 ``` shell
@@ -89,18 +89,18 @@ a59c5bb01bd8        hyperledger/fabric-peer               "peer node start"     
 
 # 查询和调用，cli容器内执行
 > 查询
-- $peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["query","a"]}'
+- peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["query","a"]}'
 
 > 调用
 ``` shell
-- $peer chaincode invoke -o orderer.example.com:7050  --tls $CORE_PEER_TLS_ENABLED --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/cacerts/ca.example.com-cert.pem  -C $CHANNEL_NAME -n mycc -c '{"Args":["invoke","a","b","10"]}'
+- peer chaincode invoke -o orderer.example.com:7050  --tls $CORE_PEER_TLS_ENABLED --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/cacerts/ca.example.com-cert.pem  -C $CHANNEL_NAME -n mycc -c '{"Args":["invoke","a","b","10"]}'
 ```
 
 > 日志查看，宿主机执行
-- $docker logs peer0.org1.example.com 
+- docker logs peer0.org1.example.com 
 
 > 日志实时查看，宿主机执行
-- $docker logs -f peer0.org1.example.com 
+- docker logs -f peer0.org1.example.com 
 
 # 结束清理重置，宿主机执行
 > 清理所有容器实例和密码相关配置
