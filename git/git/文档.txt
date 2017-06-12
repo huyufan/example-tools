@@ -24,3 +24,17 @@ git reset --hard origin/master
 git fetch 只是下载远程的库的内容，不做任何的合并 git reset 把HEAD指向刚刚下载的最新的版本
 
 git checkout .
+
+git log 
+
+git log -p -2  -p 选项展开显示每次提交的内容差异，用 -2 则仅显示最近的两次更新
+
+git  show commit  查看提交的东西
+
+git log --stat 显示被修改文件的修改统计信息，添加或删除了多少行
+
+使用'git log --pretty=format'命令，可以将提交历史显示成你想要的格式。这里format的可选项包括：oneline，short，medium，full，fuller，email，raw。每种格式都有侧重的显示相关内容。
+
+git  log  --author=
+
+希望查看某个指定文件的提交历史 git log --pretty=oneline -- notes.c (文件)
