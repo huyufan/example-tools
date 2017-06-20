@@ -1,8 +1,21 @@
 # 前期准备
-- centos 7.3 内核大于3.10 **docker** **docker-compose**
+- yum update yum -y install epel-release yum -y install python-pip
+- centos 7.3 内核大于3.10 **docker** **docker-compose** **go**
 - [官网文档][https://hyperledger-fabric.readthedocs.io/en/latest/getting_started.html] 
 - mkdir fabric-sample cd fabric-sample
 - curl -sSL https://goo.gl/LQkuoh | bash
+
+## go 安装
+- tar -zxvf go1.8.3.linux-amd64.tar.gz -C /usr/local/
+- export GOPATH=/data/golist
+- export GOROOT=/usr/local/go
+- PATH=$PATH:$GOROOT/BIN
+
+## docker 安装
+- curl -sSL https://get.daocloud.io/docker | sh
+- yum install   -y gcc libtool libltdl-dev libtool-ltdl-devel openssl
+- go get github.com/golang/protobuf/protoc-gen-go
+- url -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://d4cc5789.m.daocloud.io
 
 # fabric 配置
 - ./bin/cryptogen generate --config=./crypto-config.yaml
@@ -33,7 +46,7 @@
 
 > 如果使用CouchDB
 - CHANNEL_NAME=$CHANNEL_NAME TIMEOUT=1000 docker-compose -f docker-compose-cli.yaml -f docker-compose-couch.yaml up -d
-
+- 用CouchDB启动后,可以在浏览器输入url地址(例如http://192.168.1.209:5984/_utils/)
 > 执行之后如下
 ``` shell
 
