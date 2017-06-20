@@ -18,7 +18,7 @@
 	- [代码补全ide][16]
 - yaf
 	- [代码补全ide][17]
-## http|https
+## http | https
 * [状态码][1]
   <li><a href="https://github.com/huyufan/example-tools/blob/master/https/status.md#http_header_fields">头部字段描述<a></li>
 

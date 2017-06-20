@@ -38,3 +38,16 @@ git log --stat 显示被修改文件的修改统计信息，添加或删除了多少行
 git  log  --author=
 
 希望查看某个指定文件的提交历史 git log --pretty=oneline -- notes.c (文件)
+
+
+ git update-index --assume-unchanged /path/to/file       #忽略跟踪
+
+ git update-index --no-assume-unchanged /path/to/file  #恢复跟踪
+ 
+  另外 git 提供了一个全局的 .gitignore，你可以在你的用户目录下创建 ~/.gitignoreglobal 文件，以同样的规则来划定哪些文件是不需要版本控制的。
+需要执行 git config --global core.excludesfile ~/.gitignoreglobal来使得它生效。
+ 
+   还有一种情况，就是已经commit了，再加入gitignore是无效的，所以需要删除下缓存
+     git rm -r --cached ignore_file
+
+注意： .gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。
