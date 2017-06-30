@@ -1,0 +1,27 @@
+如果你的Linux系统上还没有Git
+
+mkdir -p ~/.vim/bundle 
+
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+
+现在设置你的.vimrc文件
+set nocompatible 
+filetype off   
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()  
+Plugin 'gmarik/Vundle.vim' 
+Bundle 'scrooloose/nerdtree'
+let NERDTreeWinPos='right'
+let NERDTreeWinSize=30
+map <F2> :NERDTreeToggle<CR>
+call vundle#end()  
+
+
+
+:BundleList -列举出列表中(.vimrc中)配置的所有插件
+:BundleInstall -安装列表中全部插件
+:BundleInstall! -更新列表中全部插件
+:BundleSearch foo -查找foo插件
+:BundleSearch! foo -刷新foo插件缓存
+:BundleClean -清除列表中没有的插件
+:BundleClean! -清除列表中没有的插件
