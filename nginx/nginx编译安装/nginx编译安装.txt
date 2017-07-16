@@ -1,3 +1,6 @@
+yum -y install gcc automake autoconf libtool make  gcc-c++
+
+
 wget -c http://nginx.org/download/nginx-1.11.9.tar.gz
 zlib: 为nginx提供gzip模块，需要zlib库支持
 
@@ -10,3 +13,8 @@ pcre: 为支持地址重写rewrite功能
 http://www.zlib.net/zlib-1.2.11.tar.gz
  
 https://www.openssl.org/source/openssl-1.0.2k.tar.gz
+
+groupadd -r www
+useradd -r -g www -s /bin/false  或者 /sbin/nologin -M nginx
+
+./configure --prefix=/usr/local/nginx --user=www --group=www --with-http_ssl_module --with-http_gzip_static_module --with-http_stub_status_module --with-pcre=/data/pcre-8.40 --with-http_gunzip_module --with-openssl=/data/openssl-1.0.2k --with-zlib=/data/zlib-1.2.11
