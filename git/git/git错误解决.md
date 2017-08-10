@@ -1,4 +1,4 @@
-# Git: solving error ¡°Cannot update paths and switch to branch¡±
+# Git: solving error "Cannot update paths and switch to branch"
 
 - When trying to create a local branch from a remote one, git may display the following error:
 
