@@ -51,3 +51,19 @@ git  log  --author=
      git rm -r --cached ignore_file
 
 注意： .gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。
+
+查看远程库
+git  remote  show   origin
+
+git  remote prune origin
+
+使用 Git rm 命令即可，有两种选择.
+         一种是 git rm --cached "文件路径"，不删除物理文件，仅将该文件从缓存中删除；
+         一种是 git rm --f "文件路径"，不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）
+    假如你有文件不小心commit到了服务器那么你想要删除它,可以使用:
+	
+	
+	git rm -r --cached  wedsd.txt
+git commit -m "delete 43.pdf desktop.ini test.txt wedsd.txt"
+ git pull origin develop
+git push origin develop

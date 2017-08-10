@@ -1,0 +1,48 @@
+1. 直接本地缓存
+
+1.1 http 1.1的 Cache-Control
+
+Response中的 Cache-Control 头指示浏览器按何种规则缓存该资源，例：
+Cache-Control: public, max-age=31536000
+
+
+该header是复合类型，常见参数的含义：
+
+public : 用户浏览器和中间proxy都会cache
+private : 只有用户端会cache
+max-age=xxx : 设置cache的最大存活时间，单位s
+no-store: 不要缓存
+no-cache: 同上，但是浏览器的支持可能不一致，最好两个一起用
+
+
+1.2 http 1.0的 Expires & Pragma
+
+Expires: Mon, 19 Nov 2012 08:40:01 GMT 
+指定cache的绝对过期时间，和Cache-Control一起使用时以后者为准。
+
+Pragma: no-cache 
+指定不要缓存。
+
+2. 304校验缓存
+
+这种方式需要向服务器发送本地cache的信息让其校验，通常校验的标准有两个：
+
+内容
+最后修改时间
+
+2.1 基于内容的 ETag
+ETag是Entity Tag的缩写，它由服务器端指定，通常是一个资源的内容的hash（需要自己在代码中计算）。当Response中指定了ETag：
+
+Etag: 427fe7b6442f2096dff4f92339305444
+浏览器将资源缓存到本地，下次访问时在Request中将该ETag传回服务器：
+
+If-None-Match: 427fe7b6442f2096dff4f92339305444
+服务器将该资源最新版本的ETag与收到的ETag比对，不一致则渲染页面发送200响应，一致则返回304(not modified)，通知浏览器使用本地缓存。
+
+
+2.2 基于最后修改时间的 Last-Modified
+
+工作机制和ETag一致，Request将本地缓存的最后修改时间通过 If-Modified-Since 发送到服务器。
+
+有关Http cache机制的使用场景和具体应用方法，见Robbin_基于资源的HTTP Cache的实现介绍，介绍的非常详细。
+

@@ -1,0 +1,3 @@
+node  6.10.3
+truffle@2.1.2
+http://wangxiaoming.com/blog/2016/04/30/blockchain-tech-truffle/

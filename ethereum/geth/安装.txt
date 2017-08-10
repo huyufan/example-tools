@@ -1,0 +1,37 @@
+1: 安装golang
+
+2: 安装以太坊go-ethereum-1.6.6.zip  配置正确的go路径( PATH=$PATH:$HOME/bin:/data/node/bin:/usr/local/go/bin)
+	1:压缩并进入解压缩后的目录  pwd  然后 只要make 一下 就行  出现 build/bin  就安装成功了
+	
+	2:go-ethereum-1.6.6/build/bin 创建init.json 文件  内容为	
+   {
+     "nonce": "0x0000000000000042",
+     "difficulty": "0x400",
+     "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "coinbase": "0x0000000000000000000000000000000000000000",
+     "timestamp": "0x00",
+     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "extraData": "0x11bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82fa",
+     "gasLimit": "0xffff0000",
+     "alloc": {},
+     "config": {
+          "chainId": 15,
+          "homesteadBlock": 0,
+          "eip155Block": 0,
+          "eip158Block": 0
+      }
+  }
+  
+   3: 执行./geth  --datadir "/app/chain" init init.json
+   
+   4:./geth --rpc --rpccorsdomain "*" --datadir "/app/chain" --port "30303" --rpcapi "db,eth,net,web3 personal" --rpcaddr "0.0.0.0"  --networkid 100000 console  
+    
+   5:   命令
+		personal.listAccounts 列出用户
+		personal.newAccount() 创建用户
+		web3.fromWei(eth.getBalance(eth.coinbase), "ether") 查看默认的账号
+		miner.start(1)  miner.stop() 挖矿
+		eth.sendTransaction({from: '0xa7c417243694fb3a880629879dfe4b71f7cffd3f', to: '0x0ee35a76b6dbc9fcb44afbbf92362b6653ebcd1a', value: web3.toWei(1, "ether")}) 转账
+		personal.unlockAccount("0xa7c417243694fb3a880629879dfe4b71f7cffd3f", "123456", 300)
+		web3.fromWei(eth.getBalance(eth.accounts[1]),"ether")  查看账号   
+		转账后 需要挖矿才有记录
