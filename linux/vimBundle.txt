@@ -51,4 +51,4 @@ autocmd vimenter * NERDTree</cr></f2>
  Plugin 'kien/ctrlp.vim' / 搜索      
  Bundle 'scrooloose/nerdtree'
  Bundle 'shawncplus/phpcomplete.vim'
-
+ Plugin 'scrooloose/syntastic' 
