@@ -46,3 +46,9 @@ autocmd vimenter * if !argc()|NERDTree|endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 ""打开vim时自动打开NERDTree
 autocmd vimenter * NERDTree</cr></f2>
+
+ Plugin 'gmarik/Vundle.vim' 
+ Plugin 'kien/ctrlp.vim' / 搜索      
+ Bundle 'scrooloose/nerdtree'
+ Bundle 'shawncplus/phpcomplete.vim'
+
