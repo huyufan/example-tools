@@ -1,10 +1,10 @@
-Èç¹ûÄãµÄLinuxÏµÍ³ÉÏ»¹Ã»ÓĞGit
+å¦‚æœä½ çš„Linuxç³»ç»Ÿä¸Šè¿˜æ²¡æœ‰Git
 
 mkdir -p ~/.vim/bundle 
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
 
-ÏÖÔÚÉèÖÃÄãµÄ.vimrcÎÄ¼ş
+ç°åœ¨è®¾ç½®ä½ çš„.vimrcæ–‡ä»¶
 set nocompatible 
 filetype off   
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -18,10 +18,31 @@ call vundle#end()
 
 
 
-:BundleList -ÁĞ¾Ù³öÁĞ±íÖĞ(.vimrcÖĞ)ÅäÖÃµÄËùÓĞ²å¼ş
-:BundleInstall -°²×°ÁĞ±íÖĞÈ«²¿²å¼ş
-:BundleInstall! -¸üĞÂÁĞ±íÖĞÈ«²¿²å¼ş
-:BundleSearch foo -²éÕÒfoo²å¼ş
-:BundleSearch! foo -Ë¢ĞÂfoo²å¼ş»º´æ
-:BundleClean -Çå³ıÁĞ±íÖĞÃ»ÓĞµÄ²å¼ş
-:BundleClean! -Çå³ıÁĞ±íÖĞÃ»ÓĞµÄ²å¼ş
+:BundleList -åˆ—ä¸¾å‡ºåˆ—è¡¨ä¸­(.vimrcä¸­)é…ç½®çš„æ‰€æœ‰æ’ä»¶
+:BundleInstall -å®‰è£…åˆ—è¡¨ä¸­å…¨éƒ¨æ’ä»¶
+:BundleInstall! -æ›´æ–°åˆ—è¡¨ä¸­å…¨éƒ¨æ’ä»¶
+:BundleSearch foo -æŸ¥æ‰¾fooæ’ä»¶
+:BundleSearch! foo -åˆ·æ–°fooæ’ä»¶ç¼“å­˜
+:BundleClean -æ¸…é™¤åˆ—è¡¨ä¸­æ²¡æœ‰çš„æ’ä»¶
+:BundleClean! -æ¸…é™¤åˆ—è¡¨ä¸­æ²¡æœ‰çš„æ’ä»¶
+
+
+""å°†F2è®¾ç½®ä¸ºå¼€å…³NERDTreeçš„å¿«æ·é”®
+map <f2> :NERDTreeToggle<cr>
+""ä¿®æ”¹æ ‘çš„æ˜¾ç¤ºå›¾æ ‡
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
+""çª—å£ä½ç½®
+let g:NERDTreeWinPos='left'
+""çª—å£å°ºå¯¸
+let g:NERDTreeSize=30
+""çª—å£æ˜¯å¦æ˜¾ç¤ºè¡Œå·
+let g:NERDTreeShowLineNumbers=1
+""ä¸æ˜¾ç¤ºéšè—æ–‡ä»¶
+let g:NERDTreeHidden=0
+""æ‰“å¼€vimæ—¶å¦‚æœæ²¡æœ‰æ–‡ä»¶è‡ªåŠ¨æ‰“å¼€NERDTree
+autocmd vimenter * if !argc()|NERDTree|endif
+""å½“NERDTreeä¸ºå‰©ä¸‹çš„å”¯ä¸€çª—å£æ—¶è‡ªåŠ¨å…³é—­
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+""æ‰“å¼€vimæ—¶è‡ªåŠ¨æ‰“å¼€NERDTree
+autocmd vimenter * NERDTree</cr></f2>
