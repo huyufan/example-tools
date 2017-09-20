@@ -1,0 +1,5 @@
+auth_basic "nginx basic http test for ttlsa.com";
+auth_basic_user_file conf/htpasswd; 
+autoindex on;
+
+http://www.ttlsa.com/nginx/nginx-basic-http-authentication/
