@@ -1,5 +1,9 @@
-1: ������֧����master ��֧  git checkout -b develop origin/master �Ƶ�����  git push -u origin develop
+1: 创建分支基于master 分支  git checkout -b develop origin/master 推到线上  git push -u origin develop
 
-2:ɾ�����ط�֧  git branch -D ��֧   
+2:删除本地分支  git branch -D 分支   
 
-3:ɾ��Զ�̷�֧ git push origin :��֧
+3:删除远程分支 git push origin :分支
+
+4:git remote show origin 远程真实存在的分支
+ 
+5:git remote prune origin  已经删除的分支，但是在本地能看到已删除的远程分支，可以用这个命令清除已删除的分支
