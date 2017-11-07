@@ -67,3 +67,5 @@ git  remote prune origin
 git commit -m "delete 43.pdf desktop.ini test.txt wedsd.txt"
  git pull origin develop
 git push origin develop
+
+解决untracked file 同linux rm命令一样 (git clean -d -fx)
