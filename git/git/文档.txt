@@ -5,6 +5,8 @@ git push origin --delete dev
 删除本地分支
 git branch -d dev
 the branch  XXX is not fully merged  原因：XXX分支有没有合并到当前分支的内容  git  branch -D dev
+Git 清理无效的远程追踪分支
+git remote prune origin --dry-run
 查看本地分支
 git branch
 查看远程分支
