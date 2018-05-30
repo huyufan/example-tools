@@ -74,7 +74,7 @@
 [15]: https://github.com/huyufan/example-tools/blob/master/linux/linux.md
 [16]: https://github.com/eaglewu/swoole-ide-helper
 [17]: https://github.com/xudianyang/yaf.auto.complete
-[18]: https://github.com/huyufan/example-tools/blob/master/%E7%AE%97%E6%B3%95/bubble.php
+[18]: https://github.com/huyufan/example-tools/blob/master/%E8%B5%84%E6%96%99%E6%96%87%E6%A1%A3/%E7%AE%97%E6%B3%95/bubble.php
 [19]: https://github.com/huyufan/work-docment/blob/master/mysql/analyze.txt
 [20]: https://github.com/huyufan/example-tools/blob/master/mysql/%E4%BC%98%E5%8C%96sql%E8%AF%AD%E5%8F%A5.md
 [21]: https://github.com/huyufan/work-docment/blob/master/mysql/%E5%AE%89%E8%A3%85mysql56.txt
