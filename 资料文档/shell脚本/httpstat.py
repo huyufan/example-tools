@@ -5,7 +5,13 @@
 # https://curl.haxx.se/libcurl/c/curl_easy_getinfo.html
 # https://curl.haxx.se/libcurl/c/easy_getinfo_options.html
 # http://blog.kenweiner.com/2014/11/http-request-timings-with-curl.html
-
+# namelookup_time: 解析时间， 从开始直到解析完远程请求的时间；
+# connect_time: 建立连接时间,从开始直到与远程请求服务器建立连接的时间；
+# time_appconnect：连接建立完成时间，如SSL/SSH等建立连接或者完成三次握手时间
+# pretransfer_time: 从开始直到第一个远程请求接收到第一个字节的时间；
+# starttranster_time: 从开始直到第一个字节返回给curl的时间；
+# total_time： 从开始直到结束的所有时间。
+# https://blog.csdn.net/hqzxsc2006/article/details/50547684
 from __future__ import print_function
 
 import os
