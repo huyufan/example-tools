@@ -4,3 +4,6 @@ http://www.codeceo.com/article/https-knowledge.html#0-tsina-1-49718-397232819ff9
 
 https  搭建
 http://www.codeceo.com/article/add-https-to-website.html
+
+http 详解
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding
