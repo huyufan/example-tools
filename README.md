@@ -69,9 +69,9 @@
 [10]: https://github.com/huyufan/example-tools/blob/master/php/php%E8%B5%84%E6%96%99%E6%96%87%E6%A1%A3/PHP%E9%A5%AD%E7%B1%B3%E7%B2%92.txt
 [11]: https://github.com/huyufan/example-tools/blob/master/linux/systemctl/systemctl%E5%BC%80%E5%90%AF%E6%9C%8D%E5%8A%A1.txt
 [12]: https://github.com/huyufan/example-tools/blob/master/linux/systemctl/systemctl%E7%94%A8%E6%B3%95.txt
-[13]: https://github.com/huyufan/example-tools/blob/master/linux/conteosifconfig.txt
+[13]: https://github.com/huyufan/example-tools/blob/master/linux/conteosifconfig.md
 [14]: https://github.com/huyufan/example-tools/tree/master/linux/sysstat
-[15]: https://github.com/huyufan/example-tools/blob/master/linux/linux.md
+[15]: https://github.com/huyufan/example-tools/blob/master/linux
 [16]: https://github.com/eaglewu/swoole-ide-helper
 [17]: https://github.com/xudianyang/yaf.auto.complete
 [18]: https://github.com/huyufan/example-tools/blob/master/%E8%B5%84%E6%96%99%E6%96%87%E6%A1%A3/%E7%AE%97%E6%B3%95/bubble.php
