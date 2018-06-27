@@ -26,5 +26,5 @@
 > $ service docker start
 
 
-7:资料文档[地址一][:http://elrepo.org/tiki/tiki-index.php][地址二][:http://www.phpkoo.com/archives/305]
+7:资料文档[地址一](http://elrepo.org/tiki/tiki-index.php)[地址二](http://www.phpkoo.com/archives/305)
 
