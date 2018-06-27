@@ -13,3 +13,23 @@
 > worker_cpu_affinity 0010 0100 1000;
 > 这里0010 0100 1000是掩码,分别代表第2、3、4颗cpu核心。
 > 重启nginx后,3个工作进程就可以各自用各自的CPU了。
+
+4:设置php-fpm
+``` bash
+#!/bin/bash
+
+CPUs=$(grep -c processor /proc/cpuinfo)
+PIDs=$(ps aux | grep "php-fpm[:] pool" | awk '{print $2}')
+
+let i=0
+for PID in $PIDs; do
+    CPU=$(echo "$i % $CPUs" | bc)
+    let i++
+
+    taskset -pc $CPU $PID
+done
+
+```
+> mpstat -P ALL 1 10
+
+> pidstat | grep php-fpm | awk '{print $(NF-1)}' | sort | uniq -c (查看CPU0负载)
