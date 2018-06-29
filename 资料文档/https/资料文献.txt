@@ -7,3 +7,6 @@ http://www.codeceo.com/article/add-https-to-website.html
 
 http 详解
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding
+
+http 缓存
+https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn
