@@ -1,8 +1,8 @@
-# php ±à³ÌÐÄµÃ
-##[ÓÐÐ©À´×Ô][https://github.com/TIGERB/easy-tips/blob/master/pit.md]
+# php ç¼–ç¨‹å¿ƒå¾—
+##[æœ‰äº›æ¥è‡ª][https://github.com/TIGERB/easy-tips/blob/master/pit.md]
 
 ``` php
-// php5.6¿ªÊ¼¸ÉµôÁË@Óï·¨£¬phpÉÏ´«Í¼Æ¬¼æÈÝ°æ±¾Ð´·¨
+// php5.6å¼€å§‹å¹²æŽ‰äº†@è¯­æ³•ï¼Œphpä¸Šä¼ å›¾ç‰‡å…¼å®¹ç‰ˆæœ¬å†™æ³•
 
 if (class_exists('\CURLFile')) {
     curl_setopt($curl, CURLOPT_SAFE_UPLOAD, true);
@@ -16,26 +16,30 @@ if (class_exists('\CURLFile')) {
 ```
 
 ``` php
-// ÐòÁÐ»¯Óë·´ÐòÁÐ»¯
+// åºåˆ—åŒ–ä¸Žååºåˆ—åŒ–
 
-¸ÅÄî:
-ÐòÁÐ»¯£º°Ñ±äÁ¿(ËùÓÐÀàÐÍ)×ª³ÉÄÜ´«ÊäºÍ´¢´æµÄ±äÁ¿(²»¶ªÊ§Ô­±äÁ¿µÄÊôÐÔºÍ½á¹¹)
-·´ÐòÁÐ»¯£º°Ñ×Ö·û´®×ª³ÉÔ­±äÁ¿
+æ¦‚å¿µ:
+åºåˆ—åŒ–ï¼šæŠŠå˜é‡(æ‰€æœ‰ç±»åž‹)è½¬æˆèƒ½ä¼ è¾“å’Œå‚¨å­˜çš„å˜é‡(ä¸ä¸¢å¤±åŽŸå˜é‡çš„å±žæ€§å’Œç»“æž„)
+ååºåˆ—åŒ–ï¼šæŠŠå­—ç¬¦ä¸²è½¬æˆåŽŸå˜é‡
 
-º¯Êý£º
-ÐòÁÐ»¯£ºserialize, json_encode(²»ÄÜÐòÁÐ»¯¶ÔÏó)
-·´ÐòÁÐ»¯£ºunserialize, json_decode
+å‡½æ•°ï¼š
+åºåˆ—åŒ–ï¼šserialize, json_encode(ä¸èƒ½åºåˆ—åŒ–å¯¹è±¡)
+ååºåˆ—åŒ–ï¼šunserialize, json_decode
 ```
 
 ``` php
-// staticºÍselfµÄÇø±ð
+// staticå’Œselfçš„åŒºåˆ«
 
-µÚÒ»ÖÖ½âÊÍ:
-- static: ´ú±íµ±Ç°ËùÒýÓÃµÄÀà
-- self: ´ú±íµ±Ç°´úÂëÆ¬¶ÏËùÔÚµÄÀà
+ç¬¬ä¸€ç§è§£é‡Š:
+- static: ä»£è¡¨å½“å‰æ‰€å¼•ç”¨çš„ç±»
+- self: ä»£è¡¨å½“å‰ä»£ç ç‰‡æ–­æ‰€åœ¨çš„ç±»
 
-µÚ¶þÖÖ½âÊÍ£º
-Èç¹û×ÓÀàºÍ¸¸Àà¶¼ÓÐÒ»¸ö¡°A¡±·½·¨¡£ÄÇÃ´
-- static: »áµ÷ÓÃµ½×ÓÀàµÄA·½·¨
-- self: »áµ÷ÓÃµ½µ±Ç°ÀàµÄA·½·¨£¬Èç¹ûÔÚ×ÓÀàÖÐself::A()£¬½«»áµ÷ÓÃµ½×ÓÀàµÄA·½·¨£¬Èç¹ûÔÚ¸¸ÀàÖÐ£¬½«»áµ÷ÓÃ¸¸ÀàµÄA·½·¨¡£
+ç¬¬äºŒç§è§£é‡Šï¼š
+å¦‚æžœå­ç±»å’Œçˆ¶ç±»éƒ½æœ‰ä¸€ä¸ªâ€œAâ€æ–¹æ³•ã€‚é‚£ä¹ˆ
+- static: ä¼šè°ƒç”¨åˆ°å­ç±»çš„Aæ–¹æ³•
+- self: ä¼šè°ƒç”¨åˆ°å½“å‰ç±»çš„Aæ–¹æ³•ï¼Œå¦‚æžœåœ¨å­ç±»ä¸­self::A()ï¼Œå°†ä¼šè°ƒç”¨åˆ°å­ç±»çš„Aæ–¹æ³•ï¼Œå¦‚æžœåœ¨çˆ¶ç±»ä¸­ï¼Œå°†ä¼šè°ƒç”¨çˆ¶ç±»çš„Aæ–¹æ³•ã€‚
+```
+
+``` php
+// html è½¬ pdf (wkhtmltopdf)
 ```
