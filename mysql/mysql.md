@@ -19,3 +19,7 @@
 五 其他
 1.建议设置最大文件数为65535
 2.建议设置用户最大链接数位65535
+
+
+## dirty ratio
+dirty ratio(https://feichashao.com/dirty_ratio_and_dirty_background_ratio/)
