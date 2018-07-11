@@ -22,4 +22,4 @@
 
 
 ## dirty ratio
-dirty ratio(https://feichashao.com/dirty_ratio_and_dirty_background_ratio/)
+dirty ratio(https://feichashao.com/dirty_ratio_and_dirty_background_ratio)
