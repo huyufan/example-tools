@@ -16,3 +16,20 @@ Time taken for tests / Complete requests
 可以看到，它是吞吐率的倒数。
 同时，它也=用户平均请求等待时间/并发用户数，即
 Time per request / Concurrency Level
+
+
+https://www.jb51.net/article/117879.htm （统计）
+
+awk '{print $4}' access.log |cut -c 14-21|sort|uniq -c|sort -nr|head -n 100　（每秒请求量统计）
+
+awk '{print $4}' access.log |cut -c 14-18|sort|uniq -c|sort -nr|head -n 100　（每分钟请求量统计）
+
+
+awk '{print $4}' access.log |cut -c 14-15|sort|uniq -c|sort -nr|head -n 100　（每小时请求量统计）
+
+在nginx log中最后一个字段加入$request_time
+
+
+列出传输时间超过3秒的页面，显示前20条　　cat access.log|awk '($NF > 3){print $7}'|sort -n|uniq -c|sort -nr|head -20
+
+列出php页面请求时间超过3秒的页面，并统计其出现的次数，显示前100条　cat access.log|awk '($NF > 1 && $7~/\.php/){print $7}'|sort -n|uniq -c|sort -nr|head -100
