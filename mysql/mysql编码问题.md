@@ -10,10 +10,11 @@
 
 
 ## 修改默认文件的配置 /etc/my.cnf
-
->[mysqld]
->character-set-server=utf8
->[client]
->default-character-set=utf8
->[mysql]
->default-character-set=utf8
+``` mysql
+[mysqld]
+character-set-server=utf8
+[client]
+default-character-set=utf8
+[mysql]
+default-character-set=utf8
+```
