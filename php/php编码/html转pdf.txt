@@ -1,0 +1,1 @@
+wkhtmltopdf-amd64  " --page-size A4 \"{$preview_url}\" {$preview_file}"
