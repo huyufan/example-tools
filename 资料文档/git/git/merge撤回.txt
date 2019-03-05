@@ -1,0 +1,11 @@
+git merge --no-ff  
+
+1、命令
+⑴ git reflog 
+查看merge操作的上一个提交记录的版本号
+
+⑵ git reset –hard 版本号 
+这样可以回滚到merge之前的状态
+
+Charles 苹果抓包
+https://www.jianshu.com/p/5539599c7a25
