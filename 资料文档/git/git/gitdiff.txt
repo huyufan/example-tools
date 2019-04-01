@@ -1,0 +1,13 @@
+1:比较暂存区与工作区的区别
+
+git diff <file_path>
+
+
+2:比较暂存区与版本库最新添加
+
+git diff --cached <file_path>
+
+3:比较版本库和工作区的区别
+
+git diff HEAD <file_path>
+
