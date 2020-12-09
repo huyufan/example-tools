@@ -1,1 +1,1 @@
-ls -t -A | head -2000 | xargs -t -i cp -rf {} /www/wwwroot/makehtml/public/
+ls -t -A | head -2000 | xargs -t -i cp -rf {} /www/wwwroot/makehtml/public/ 联合使用
